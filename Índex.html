@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Antivirus Python</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: white; text-align: center; }
+        .box { border: 2px solid #00ff00; padding: 20px; display: inline-block; margin-top: 50px; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px 20px; background: #00ff00; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Escáner de Seguridad</h1>
+        <form action="/escanear" method="post">
+            <input type="text" name="ruta" placeholder="C:\Ruta\a\escanear" required>
+            <button type="submit">Analizar Ahora</button>
+        </form>
+        {% if resultado %}
+            <p><strong>Resultado:</strong> {{ resultado }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
