@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import os
+import hashlib
 
 app = Flask(__name__)
 
